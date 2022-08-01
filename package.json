@@ -1,0 +1,41 @@
+{
+  "name": "rest-countries-api-with-color-theme-switcher-master",
+  "version": "0.0.0",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrzywN/rest-countries-api-with-color-theme-switcher-master.git"
+  },
+  "keywords": [
+    "rest",
+    "countries",
+    "api",
+    "color",
+    "theme",
+    "switcher"
+  ],
+  "author": "Karol Binkowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrzywN/rest-countries-api-with-color-theme-switcher-master/issues"
+  },
+  "homepage": "https://github.com/GrzywN/rest-countries-api-with-color-theme-switcher-master#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "vite": "^3.0.0"
+  }
+}
