@@ -1,34 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+
+import useHttp from "./hooks/useHttp";
+import Country from "./models/Country";
+import Header from "./components/Header";
+import CountriesCardsContainer from "./containers/CountriesCardsContainer";
+import CountryDetails from "./components/CountryDetails";
+
+const restCountriesUrl = "https://restcountries.com/v3.1/";
+const restCountriesFullUrl = `${restCountriesUrl}all`;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [countries, setCountries] = useState();
+  const { loading, error, request } = useHttp();
+
+  useEffect(() => {
+    let subscribed = true;
+
+    request({ url: restCountriesFullUrl }).then((data) => {
+      if (!subscribed) return;
+
+      const entries = data.map((country) => new Country(country));
+      setCountries(entries);
+    });
+
+    return () => {
+      subscribed = false;
+    };
+  }, []);
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="bg-very-light-gray dark:bg-very-dark-blue-dm min-h-screen transition-colors">
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <CountriesCardsContainer
+              loading={loading}
+              error={error}
+              data={countries || []}
+            />
+          }
+        />
+        <Route path="/countries/:commonName" element={<CountryDetails />} />
+      </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
