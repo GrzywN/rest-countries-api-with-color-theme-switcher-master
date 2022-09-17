@@ -3,6 +3,7 @@ import { useParams, useLocation } from "react-router-dom";
 
 import { BackButton } from "../Buttons";
 import CountryInfo from "./CountryInfo";
+import CountryInfoSkeleton from "./CountryInfoSkeleton";
 import useHttp from "../../hooks/useHttp";
 import Country from "../../models/Country";
 
@@ -41,7 +42,9 @@ function CountryPage() {
       lg:pt-20"
     >
       <BackButton />
-      {!loading && !error && details && <CountryInfo details={details} />}
+      {(!loading && !error && details && <CountryInfo details={details} />) || (
+        <CountryInfoSkeleton />
+      )}
     </main>
   );
 }

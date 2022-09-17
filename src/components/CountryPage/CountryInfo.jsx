@@ -34,8 +34,6 @@ function CountryInfo({ details }) {
         src={flag}
         title={`${name} flag`}
         alt={`${name} flag`}
-        width="20rem"
-        height="14.3125rem"
       />
       <figcaption
         className="
@@ -52,8 +50,8 @@ function CountryInfo({ details }) {
         </h2>
         <div
           className="
-          font-sans text-sm font-light leading-8 tracking-normal
-          md:mt-[1.4375rem] md:flex md:justify-between md:text-base md:leading-8"
+          max-w-xl font-sans text-sm font-light leading-8 tracking-normal
+          md:mt-[1.4375rem] md:flex md:justify-between md:gap-8 md:text-base md:leading-8"
         >
           <ul
             className="

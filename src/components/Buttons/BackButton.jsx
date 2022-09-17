@@ -7,7 +7,7 @@ function BackButton() {
   return (
     <Link
       className="dark:bg-dark-blue rounded-6 inline-flex h-10 w-[8.5rem] items-center justify-center gap-2 bg-white shadow-xl"
-      to={-1}
+      to="/"
     >
       <LeftArrow />
       <span className="text-very-dark-blue-lm font-sans text-sm font-light tracking-normal dark:text-white">

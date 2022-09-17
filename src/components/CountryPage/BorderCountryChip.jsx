@@ -10,7 +10,11 @@ function BorderCountryChip({ name }) {
 }
 
 BorderCountryChip.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
+};
+
+BorderCountryChip.defaultProps = {
+  name: "",
 };
 
 export default BorderCountryChip;
