@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import slugify from "slugify";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
-import "react-lazy-load-image-component/src/effects/blur.css";
+
+import ListEntry from "../ListEntry";
 
 function Card({ countriesData }) {
   const { flag, name, population, region, capital } = countriesData;
@@ -21,25 +22,16 @@ function Card({ countriesData }) {
       />
       <figcaption className="grid h-44 p-6 pb-[2.875rem]">
         <Link
-          to={`/countries/${slugify(name, { lower: true })}`}
+          to={`/country/${slugify(name, { lower: true })}`}
           state={countriesData}
         >
           <h2 className="font-extra-bold">{name}</h2>
         </Link>
-        <div className="mt-4 grid gap-2 text-sm font-light leading-4">
-          <p>
-            <span className="font-semi-bold">Population: </span>
-            <span>{population}</span>
-          </p>
-          <p>
-            <span className="font-semi-bold">Region: </span>
-            <span>{region}</span>
-          </p>
-          <p>
-            <span className="font-semi-bold">Capital: </span>
-            <span>{capital}</span>
-          </p>
-        </div>
+        <ul className="mt-4 grid gap-2 text-sm font-light leading-4">
+          <ListEntry attribute="Population: " value={population} />
+          <ListEntry attribute="Region: " value={region} />
+          <ListEntry attribute="Capital: " value={capital} />
+        </ul>
       </figcaption>
     </figure>
   );

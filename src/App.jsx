@@ -5,7 +5,9 @@ import useHttp from "./hooks/useHttp";
 import Country from "./models/Country";
 import Header from "./components/Header";
 import CountriesCardsContainer from "./containers/CountriesCardsContainer";
-import CountryDetails from "./components/CountryDetails";
+import CountryPage from "./components/CountryPage";
+
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const restCountriesUrl = "https://restcountries.com/v3.1/";
 const restCountriesFullUrl = `${restCountriesUrl}all`;
@@ -43,7 +45,7 @@ function App() {
             />
           }
         />
-        <Route path="/countries/:commonName" element={<CountryDetails />} />
+        <Route path="/country/:commonName" element={<CountryPage />} />
       </Routes>
     </div>
   );

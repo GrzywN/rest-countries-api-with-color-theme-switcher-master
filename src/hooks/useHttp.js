@@ -26,6 +26,8 @@ function useHttp() {
     } catch (err) {
       setLoading(false);
       setError(err.message);
+
+      return null;
     }
   };
 
