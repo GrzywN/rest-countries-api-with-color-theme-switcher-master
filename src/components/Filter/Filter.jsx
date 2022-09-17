@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { AFRICA, AMERICA, ASIA, EUROPE, OCEANIA } from "../../utils/globals";
 
+import DropdownArrow from "../Icons/DropdownArrow";
+
 function Filter({ state, onFilterChange }) {
   const changeHandler = (event) => {
     const { name, checked } = event.target;
@@ -16,10 +18,13 @@ function Filter({ state, onFilterChange }) {
     >
       <summary
         className="
-        font-regular ml-6 flex h-12 items-center text-xs leading-5 tracking-normal
+        font-regular flex h-12 items-center justify-between px-6 text-xs leading-5 tracking-normal
         md:h-14 md:text-sm"
       >
         Filter by Region
+        <i className="transition-transform">
+          <DropdownArrow />
+        </i>
       </summary>
       <div
         className="

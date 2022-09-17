@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  details[open] > summary > i {
+    @apply rotate-180;
+  }
+}
+
 /* * {
   outline: 1px dashed indigo;
 } */

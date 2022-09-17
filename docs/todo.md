@@ -1,7 +1,6 @@
 - dodac regular weight czcionki i poprawić w dropdownie
 
 Teraz, najważniejsze
-- Skeleton / Loading state do CountryDetails
 - Dodać strzałkę do componentu Filter
 - Error state
 - Przeniesienie urli i może api gdzieś indziej (globals albo inny plik)

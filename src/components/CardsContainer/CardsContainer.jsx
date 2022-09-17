@@ -10,8 +10,8 @@ function CardsContainer(props) {
   return (
     <div
       className="
-      px-4 pt-6
-      md:px-20 md:pt-12"
+      px-4 py-6
+      md:px-20 md:py-12"
     >
       <div
         className="
