@@ -1,6 +1,6 @@
 import Moon from "./Moon";
 import Magnifier from "./Magnifier";
 import LeftArrow from "./LeftArrow";
-import DropdownArrow from "./DropdownArrow";
+import DownArrow from "./DownArrow";
 
-export { Moon, Magnifier, LeftArrow, DropdownArrow };
+export { Moon, Magnifier, LeftArrow, DownArrow };

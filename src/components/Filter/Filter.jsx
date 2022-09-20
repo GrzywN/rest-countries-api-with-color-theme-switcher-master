@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { AFRICA, AMERICA, ASIA, EUROPE, OCEANIA } from "../../utils/globals";
 
-import DropdownArrow from "../Icons/DropdownArrow";
+import { DownArrow } from "../Icons";
 
 function Filter({ state, onFilterChange }) {
   const changeHandler = (event) => {
@@ -13,7 +13,7 @@ function Filter({ state, onFilterChange }) {
   return (
     <details
       className="
-      rounded-5 text-very-dark-blue-lm dark:bg-dark-blue relative z-50 h-12 w-full max-w-[12.5rem] select-none bg-white text-start shadow-md transition-colors dark:text-white
+      rounded-5 text-very-dark-blue-lm dark:bg-dark-blue relative z-50 h-12 w-full max-w-[12.5rem] cursor-pointer select-none bg-white text-start shadow-md transition-colors dark:text-white
       md:h-14"
     >
       <summary
@@ -23,7 +23,7 @@ function Filter({ state, onFilterChange }) {
       >
         Filter by Region
         <i className="transition-transform">
-          <DropdownArrow />
+          <DownArrow />
         </i>
       </summary>
       <div

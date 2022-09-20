@@ -1,11 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ScrollToTop from "react-scroll-to-top";
 
 import Search from "../Search";
 import Filter from "../Filter";
+import { DownArrow } from "../Icons";
 
 function CardsContainer(props) {
   const { searchHandler, filterChangeHandler, filterState, children } = props;
+
+  const scrollToTopArrow = (
+    <i className="rotate-180 scale-150">
+      <DownArrow />
+    </i>
+  );
 
   return (
     <div
@@ -28,6 +36,13 @@ function CardsContainer(props) {
       >
         {children}
       </div>
+      <ScrollToTop
+        className="
+        md:dark:!bg-dark-blue
+        hidden md:!grid md:place-items-center md:!rounded-full md:bg-white md:!p-2 md:!shadow-md"
+        smooth
+        component={scrollToTopArrow}
+      />
     </div>
   );
 }

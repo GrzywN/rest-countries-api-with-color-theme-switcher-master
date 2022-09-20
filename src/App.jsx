@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-very-light-gray dark:bg-very-dark-blue-dm min-h-screen transition-colors">
+    <div className="bg-very-light-gray dark:bg-very-dark-blue-dm min-h-[101vh] transition-colors">
       <Header />
       <Routes>
         <Route

@@ -36,6 +36,7 @@
     "react-dom": "^18.2.0",
     "react-lazy-load-image-component": "^1.5.5",
     "react-router-dom": "^6.3.0",
+    "react-scroll-to-top": "^3.0.0",
     "slugify": "^1.6.5"
   },
   "devDependencies": {

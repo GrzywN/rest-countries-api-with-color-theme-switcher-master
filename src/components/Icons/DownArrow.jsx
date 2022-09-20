@@ -1,6 +1,6 @@
 import React from "react";
 
-function DropdownArrow() {
+function DownArrow() {
   return (
     <>
       <svg
@@ -37,4 +37,4 @@ function DropdownArrow() {
   );
 }
 
-export default DropdownArrow;
+export default DownArrow;
