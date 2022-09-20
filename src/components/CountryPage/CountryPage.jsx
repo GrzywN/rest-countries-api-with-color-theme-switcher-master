@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 
+import { restCountriesUrlName } from "../../utils/globals";
 import { BackButton } from "../Buttons";
 import CountryInfo from "./CountryInfo";
 import CountryInfoSkeleton from "./CountryInfoSkeleton";
 import useHttp from "../../hooks/useHttp";
 import Country from "../../models/Country";
-
-const url = "https://restcountries.com/v3.1/name/";
 
 function CountryPage() {
   const { state: defaultState } = useLocation();
@@ -19,7 +18,7 @@ function CountryPage() {
     let subscribed = true;
 
     if (defaultState == null) {
-      const urlWithCountryName = `${url}${commonName}`;
+      const urlWithCountryName = `${restCountriesUrlName}/${commonName}`;
 
       request({ url: urlWithCountryName }).then((data) => {
         if (!subscribed) return;
