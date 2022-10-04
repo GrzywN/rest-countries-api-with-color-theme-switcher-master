@@ -20,12 +20,16 @@ function CountryPage() {
     if (defaultState == null) {
       const urlWithCountryName = `${restCountriesUrlName}/${commonName}`;
 
-      request({ url: urlWithCountryName }).then((data) => {
-        if (!subscribed) return;
+      request({ url: urlWithCountryName })
+        .then((data) => {
+          if (!subscribed) return;
 
-        const countryDetails = new Country(data[0]);
-        setDetails(countryDetails);
-      });
+          const countryDetails = new Country(data[0]);
+          setDetails(countryDetails);
+        })
+        .catch(() => {
+          setDetails(new Country());
+        });
     }
 
     return () => {
@@ -41,9 +45,8 @@ function CountryPage() {
       lg:pt-20"
     >
       <BackButton />
-      {(!loading && !error && details && <CountryInfo details={details} />) || (
-        <CountryInfoSkeleton />
-      )}
+      {!loading && details && <CountryInfo details={details} />}
+      {loading && !error && <CountryInfoSkeleton />}
     </main>
   );
 }

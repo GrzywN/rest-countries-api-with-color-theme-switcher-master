@@ -9,3 +9,5 @@ Długofalowe / pod koniec / finalne
 
 - try/catch zamiast NOT_FOUND w models
 - error state
+
+- CountriesCardsContainer - funkcje na zewnątrz komponentu lub innego pliku, custom hook do filtra 
