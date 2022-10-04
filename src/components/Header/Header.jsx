@@ -7,7 +7,7 @@ function Header() {
   return (
     <header
       className="
-      dark:bg-dark-blue text-very-dark-blue-lm flex h-20 items-center justify-between bg-white px-4 py-[1.875rem] shadow-lg transition-colors dark:text-white
+      dark:bg-dark-blue text-very-dark-blue-lm flex h-20 items-center justify-between bg-white px-4 py-[1.875rem] transition-colors dark:text-white
       md:px-20 md:py-6"
     >
       <Link to="/">
