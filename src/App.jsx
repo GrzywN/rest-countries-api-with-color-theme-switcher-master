@@ -30,19 +30,21 @@ function App() {
   return (
     <div className="bg-very-light-gray dark:bg-very-dark-blue-dm min-h-[101vh] transition-colors">
       <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <CountriesCardsContainer
-              loading={loading}
-              error={error}
-              data={countries || []}
-            />
-          }
-        />
-        <Route path="/country/:commonName" element={<CountryPage />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <CountriesCardsContainer
+                loading={loading}
+                error={error}
+                data={countries || []}
+              />
+            }
+          />
+          <Route path="/country/:commonName" element={<CountryPage />} />
+        </Routes>
+      </main>
     </div>
   );
 }
