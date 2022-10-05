@@ -8,8 +8,6 @@ import { CountryPropTypes } from "../../models/Country";
 import { AFRICA, AMERICA, ASIA, EUROPE, OCEANIA } from "../../utils/globals";
 
 function CountriesCardsContainer({ loading, error, data }) {
-  // console.log(data);
-
   const [search, setSearch] = useState("");
   const [regionFilters, setRegionFilters] = useState({
     [AFRICA]: true,
