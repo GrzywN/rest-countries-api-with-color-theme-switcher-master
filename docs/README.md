@@ -44,7 +44,6 @@ Users should be able to:
 
 - [React](https://reactjs.org/) - JS library
 - [React Router v6](https://reactrouter.com/en/main) - React routing
-- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 - [Vite](https://vitejs.dev/) - Bundler / Runtime
 - [ESLint](https://eslint.org/) - Linter
